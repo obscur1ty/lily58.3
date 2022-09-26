@@ -51,17 +51,17 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 	   | BT2 	      |  BT3 	       |  BT4 	     |  BT5    	   |                             | BT1  |  BT2  |  BT3  | BT4  |  BT5  | BT CLR  |
-// |       |    	   |    	      |     	       |     	     |        	   |                             |      |       |       |      |       |    \    |
-// |   ~   |  !  	   |  @  	      |  #   	       |  $   	     |  %      	   |                             |  ^   |  &    |  *    |  (   |   )   |    _    |
-// | SHIFT |  EP_ON	   | EP_OFF	      |      	       |  (   	     |  {      	   | extpwr TOG     |  |   DEL   |  }   |  )    |  +    |  {   |   }   |         |
-//                     	         	      |      	       |      	     |         	   |                |  |         |      |       |       |
+// | BTCLR |  	         |  	      |   	   |   	     |      	|                            | BT1  |  BT2  |  BT3  | BT4  |  BT5  | BT CLR  |
+// |       |    	 |    	      |     	   |         |          |                            |      |       |       |      |       |    \    |
+// |   ~   |  !  	 |  @  	      |  #   	   |  $      |  %       |                            |  ^   |  &    |  *    |  (   |   )   |    _    |
+// | SHIFT |  EP_ON	 | EP_OFF     |      	   |  (      |  {       | extpwr TOG    |  |   DEL   |  }   |  )    |  +    |  {   |   }   |         |
+//                     	              |      	   |         |          |               |  |         |      |       |       |
 			bindings = <
-&kp TILDE  &trans       &trans            &trans            &trans       &trans	                   		  &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4    &bt BT_CLR 
-&trans     &trans       &trans            &trans            &trans       &trans                       		  &trans    &trans    &trans          &trans    &trans    &kp BSLH
-&kp CAPS   &kp EXCL     &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    		  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp UNDER
-&kp LSHIFT &trans       &ext_power EP_OFF &trans            &kp LPAR     &kp LBRC       &ext_power EP_TOG         &kp DEL   &kp RBRC  &kp RPAR  &kp KP_PLUS     &kp LBRC  &kp RBRC  &trans
-                                              &trans            &trans       &trans         &trans   		&trans    &trans    &trans    &trans
+&kp TILDE  &trans     &trans            &trans       &trans       &trans	                   	  &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4    &bt BT_CLR 
+&trans     &trans     &trans            &trans       &trans       &trans                       		  &trans    &trans    &trans         &trans    &trans    &kp BSLH
+&kp CAPS   &trans     &trans            &trans       &trans       &trans                    		  &trans    &trans    &trans         &trans    &trans    &trans
+&kp LSHIFT &trans     &ext_power EP_OFF &trans       &kp LPAR     &kp LBRC    &ext_power EP_TOG  &kp DEL  &kp RBRC  &kp RPAR  &kp KP_PLUS    &trans    &trans    &trans
+                                        &trans       &trans       &trans      &trans        	 &trans   &trans    &trans    &trans 
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
